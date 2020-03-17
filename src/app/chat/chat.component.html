@@ -1,35 +1,55 @@
 <div class="container ">
   <h3 class="chat-header mb-0 ">NYS Health Assistant</h3>
-  <div class="messageContainer">
-    <div id="fromBot" class="botMessageContainer col-12 mt-3">
-      <img
-        alt="NYS bot avatar"
-        class="botPic"
-        height="40"
-        width="40"
-        src="../../assets/bot.jpeg"
+  <div #scrollMe id="scrollMe" class="messageContainer">
+    <div *ngFor="let message of messages; let i = index" tabindex="0">
+      <div
+        *ngIf="message.IsFromBot"
+        aria-labelledby="Message From Bot"
+        id="botMessage{{ i }}"
+        id="fromBot"
+        class="botMessageContainer col-12 mt-3"
+      >
+        <img
+          alt="NYS bot avatar"
+          class="botPic"
+          height="40"
+          width="40"
+          src="../../assets/bot.jpeg"
+        />
+        <div class="message botMessage">
+          {{ message.MessageText }}
+        </div>
+      </div>
+      <div
+        *ngIf="!message.IsFromBot"
+        aria-labelledby="Question asked"
+        id="humanMessage{{ i }}"
+        id="fromHuman"
+        class=" humanMessageContainer col-12 mt-3"
+      >
+        <div class="message humanMessage">
+          {{ message.MessageText }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <form [formGroup]="reactiveForm" (ngSubmit)="onSend($event)">
+    <div class="input-group sendContainer">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Ask a question"
+        aria-label="Ask a question"
+        name="inputText"
+        formControlName="inputText"
       />
-      <div class="message botMessage">
-        We have the most up-to-date Novel Coronavirus (Covid-19) information<br /><br />
-        ready to share with you. Get the facts you can trust!
+      <div class="input-group-append send">
+        <button class="btn-send " type="submit">
+          Send
+        </button>
       </div>
     </div>
-    <div id="fromHuman" class=" humanMessageContainer col-12 mt-3">
-      <div class="message humanMessage">
-        How does one catch rona?
-      </div>
-    </div>
-  </div>
-  <div class="input-group sendContainer">
-    <input
-      type="text"
-      class="form-control"
-      placeholder="Ask a question"
-      aria-label="Ask a question"
-    />
-    <div class="input-group-append send">
-      <button class="btn-send " type="button">Send</button>
-    </div>
-  </div>
+  </form>
+
   <div class="poweredByGoogle">Powered by Google</div>
 </div>
