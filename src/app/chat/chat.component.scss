@@ -1,6 +1,8 @@
 .messageContainer {
+  background-color: white !important;
   overflow-y: auto;
   height: 600px;
+  padding: 0px 0px 20px 0px;
 }
 
 .botMessageContainer {
@@ -35,7 +37,6 @@
 }
 
 .message {
-  background-color: #d4d5e3;
   color: #000;
   font-family: "Open Sans", sans-serif;
   font-size: 0.9375rem;
@@ -52,12 +53,58 @@
 .botMessage {
   float: left;
   margin-left: 40px;
+  background-color: #d4d5e3;
+
   border-radius: 0 0.5rem 0.5rem 0.5rem;
 }
 
 .humanMessage {
   float: right;
   border-radius: 0.5rem 0 0.5rem 0.5rem;
+  background-color: #f7f9fc;
+}
+.sendContainer {
+  background-color: white;
+  border-top: 1px solid #edf1f7;
+  padding: 20px;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5rem 1rem 0 rgba(44, 51, 73, 0.1);
+}
+
+.btn-send {
+  -webkit-appearance: button;
+  align-items: center;
+  background-color: #43285d;
+  border: none;
+  border-radius: 0 0.25rem 0.25rem 0;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1rem;
+  margin: 0;
+  overflow: visible;
+  padding: 0.6875rem 1.125rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: ease-in-out 0.15s;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.btn-send:hover {
+  transition: ease-in-out 0.15s;
+  background-color: rgba(67, 40, 93, 0.7);
+  border-color: rgba(67, 40, 93, 0.7);
+}
+
+.poweredByGoogle {
+  float: right;
+  color: rgb(160, 148, 181);
 }
 
 // SCROLLBAR
