@@ -1,0 +1,62 @@
+.messageContainer {
+  overflow-y: auto;
+  height: 600px;
+}
+
+.botMessageContainer {
+  width: 70%;
+  float: left;
+}
+.humanMessageContainer {
+  width: 70%;
+  float: right;
+}
+
+.chat-header {
+  background-color: #76698e;
+  border-bottom: 1px solid #edf1f7;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.5rem;
+  padding: 1rem 1.25rem;
+  text-align: center;
+}
+
+.botPic {
+  border-radius: 25px;
+  border-style: none;
+  box-sizing: border-box;
+  left: 10px;
+  position: absolute;
+  vertical-align: middle;
+}
+
+.message {
+  background-color: #d4d5e3;
+  color: #000;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  margin-bottom: 0;
+  margin-top: 0;
+  //   max-width: 60%;
+  padding: 1rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.botMessage {
+  float: left;
+  margin-left: 40px;
+  border-radius: 0 0.5rem 0.5rem 0.5rem;
+}
+
+.humanMessage {
+  float: right;
+  border-radius: 0.5rem 0 0.5rem 0.5rem;
+}
