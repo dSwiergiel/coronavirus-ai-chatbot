@@ -52,12 +52,21 @@
   margin-left: 40px;
   background-color: #d4d5e3;
   border-radius: 0 0.5rem 0.5rem 0.5rem;
+  outline: none !important;
+}
+.botMessage:focus {
+  outline: none !important;
 }
 
 .humanMessage {
   float: right;
   border-radius: 0.5rem 0 0.5rem 0.5rem;
   background-color: #f7f9fc;
+  outline: none !important;
+}
+
+.humanMessage:focus {
+  outline: none !important;
 }
 .sendContainer {
   background-color: white;
