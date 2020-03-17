@@ -26,21 +26,13 @@ export class ChatComponent implements OnInit {
   ngOnInit() {
     this.messages = [
       {
-        // MessageID: 6,
-        MessageText:
-          "Large message test Large message testLarge message testLarge message testLarge message testLarge message testLarge message testLarge message testLarge message testLarge message testLarge message testLarge message test",
+        MessageText: `We have the most up-to-date Novel Coronavirus (Covid-19) information ready to share with you. 
+
+          Get the facts you can trust!`,
         IsFromBot: true
       },
       {
-        // MessageID: 6,
-        MessageText:
-          "Large message test Large message testLarge message testLarge message testLarge message testLarge message testLarge message testLarge message testLarge message testLarge message testLarge message testLarge message test",
-        IsFromBot: false
-      },
-      {
-        // MessageID: 6,
-        MessageText:
-          "Large message test Large message testLarge message testLarge message testLarge message testLarge message testLarge message testLarge message testLarge message testLarge message testLarge message testLarge message test",
+        MessageText: `What questions do you have?`,
         IsFromBot: true
       }
     ];
@@ -90,14 +82,14 @@ export class ChatComponent implements OnInit {
 
   addUserMessage(text) {
     this.messages.push({
-      MessageText: text,
+      MessageText: text.trim(),
       IsFromBot: false
     });
   }
 
   addBotMessage(text) {
     this.messages.push({
-      MessageText: text,
+      MessageText: text.trim(),
       IsFromBot: true
     });
   }

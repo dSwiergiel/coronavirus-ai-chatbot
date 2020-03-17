@@ -6,9 +6,10 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { ChatComponent } from "./chat/chat.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { LinkifyPipe } from "./linkify.pipe";
 
 @NgModule({
-  declarations: [AppComponent, ChatComponent],
+  declarations: [AppComponent, ChatComponent, LinkifyPipe],
   imports: [
     BrowserModule,
     AppRoutingModule,

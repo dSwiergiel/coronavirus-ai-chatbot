@@ -17,7 +17,8 @@
           src="../../assets/bot.jpeg"
         />
         <div class="message botMessage">
-          {{ message.MessageText }}
+          <span [innerHTML]="message.MessageText | linkify"></span>
+          <!-- {{ message.MessageText }} -->
         </div>
       </div>
       <div
@@ -28,7 +29,8 @@
         class=" humanMessageContainer col-12 mt-3"
       >
         <div class="message humanMessage">
-          {{ message.MessageText }}
+          <span [innerHTML]="message.MessageText | linkify"></span>
+          <!-- {{ message.MessageText }} -->
         </div>
       </div>
     </div>
