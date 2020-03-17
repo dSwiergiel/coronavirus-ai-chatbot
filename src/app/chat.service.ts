@@ -25,7 +25,8 @@ export class ChatService {
       .post(environment.apiURL + "/ask", input, this.options)
       .pipe(
         catchError(err => {
-          return throwError(err);
+          console.log(err);
+          return "Something went wrong. Please try again later.";
         })
       );
 

@@ -21,22 +21,28 @@ export class LinkifyPipe implements PipeTransform {
     // );
   }
 
-  private stylize(text: string): string {
-    let stylizedText: string = "";
-    if (text && text.length > 0) {
-      for (let t of text.split(" ")) {
-        if (t.startsWith("@") && t.length > 1)
-          stylizedText += `<a href="#${t.substring(1)}">${t}</a> `;
-        else stylizedText += t + " ";
-      }
-      return stylizedText;
-    } else return text;
-  }
+  // private stylize(text: string): string {
+  //   let stylizedText: string = "";
+  //   if (text && text.length > 0) {
+  //     for (let t of text.split(" ")) {
+  //       if (t.startsWith("@") && t.length > 1)
+  //         stylizedText += `<a href="#${t.substring(1)}">${t}</a> `;
+  //       else stylizedText += t + " ";
+  //     }
+  //     return stylizedText;
+  //   } else return text;
+  // }
 
   private urlify(text: string): string {
-    var urlRegex = /(https?:\/\/[^\s]+)/g;
+    let urlRegex = /(https?:\/\/[^\s]+)/g;
     return text.replace(urlRegex, function(url) {
-      return '<a target="_blank" href="' + url + '">' + url + "</a>";
+      return (
+        '<a class="wrap-link" target="_blank" href="' +
+        url +
+        '">' +
+        url +
+        "</a>"
+      );
     });
   }
 }

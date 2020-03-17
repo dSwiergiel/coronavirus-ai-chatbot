@@ -1,16 +1,16 @@
 .messageContainer {
   background-color: white !important;
   overflow-y: auto;
-  height: 425px;
+  height: 60vh !important;
   padding: 0px 0px 20px 0px;
 }
 
 .botMessageContainer {
-  width: 70%;
+  width: 90%;
   float: left;
 }
 .humanMessageContainer {
-  width: 70%;
+  width: 90%;
   float: right;
 }
 
@@ -51,7 +51,6 @@
   float: left;
   margin-left: 40px;
   background-color: #d4d5e3;
-
   border-radius: 0 0.5rem 0.5rem 0.5rem;
 }
 
@@ -126,3 +125,15 @@
   background: #bbb;
 }
 //   /SCROLLBAR
+
+@media (max-width: 450px) {
+  .chat-header {
+    font-size: 20px;
+  }
+}
+
+@media (max-height: 700px) {
+  .messageContainer {
+    height: 375px;
+  }
+}

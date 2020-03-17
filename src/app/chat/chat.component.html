@@ -1,5 +1,5 @@
-<div class="container ">
-  <h3 class="chat-header mb-0 ">NYS Health Assistant</h3>
+<div class="container mt-3">
+  <h3 class="chat-header mb-0 ">NYS COVID-19 Virtual Assistant</h3>
   <div #scrollMe id="scrollMe" class="messageContainer">
     <div *ngFor="let message of messages; let i = index" tabindex="0">
       <div
@@ -33,6 +33,26 @@
           <!-- {{ message.MessageText }} -->
         </div>
       </div>
+    </div>
+    <div *ngIf="loading">
+      <div
+        aria-labelledby="Message From Bot"
+        id="fromBot"
+        class="botMessageContainer col-12 mt-3"
+      >
+        <img
+          alt="NYS bot avatar"
+          class="botPic"
+          height="40"
+          width="40"
+          src="../../assets/bot.jpeg"
+        />
+        <div class="message botMessage">
+          <img height="25" width="25" src="../../assets/loading.gif" />
+        </div>
+      </div>
+
+      <!-- <img height="150" width="150" src="../../assets//spinner.gif" /> -->
     </div>
   </div>
   <form [formGroup]="reactiveForm" (ngSubmit)="onSend($event)">

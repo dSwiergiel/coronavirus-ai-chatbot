@@ -26,9 +26,7 @@ export class ChatComponent implements OnInit {
   ngOnInit() {
     this.messages = [
       {
-        MessageText: `We have the most up-to-date Novel Coronavirus (Covid-19) information ready to share with you. 
-
-          Get the facts you can trust!`,
+        MessageText: `We have the most up-to-date Novel Coronavirus (Covid-19) information ready to share with you. <br><br>Get the facts you can trust!`,
         IsFromBot: true
       },
       {
@@ -49,7 +47,6 @@ export class ChatComponent implements OnInit {
     this.scrollToBottom();
 
     this.addUserMessage(messageInput.inputText);
-
     // Make an HTTP Request
     this.chat.SendMessage(messageInput).subscribe(res => {
       this.addBotMessage(res);
@@ -82,14 +79,14 @@ export class ChatComponent implements OnInit {
 
   addUserMessage(text) {
     this.messages.push({
-      MessageText: text.trim(),
+      MessageText: text,
       IsFromBot: false
     });
   }
 
   addBotMessage(text) {
     this.messages.push({
-      MessageText: text.trim(),
+      MessageText: text,
       IsFromBot: true
     });
   }
